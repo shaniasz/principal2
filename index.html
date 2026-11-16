@@ -1,73 +1,257 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Flowers</title>
-    <link rel="stylesheet" href="style.css">   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Flowers</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7fa;
+    color: #68485a;
+}
+
+header {
+    background: linear-gradient(135deg, #f7c9dc, #e8c9f0);
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    color: #914b70;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #914b70;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.inicio img {
+    width: 50%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #a4517c;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.botao {
+    display: inline-block;
+    background: #c875a1;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.flores {
+    text-align: center;
+}
+
+.flores h2 {
+    font-size: 27px;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.flor {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #ead2df;
+    transition: 0.3s;
+}
+
+.flor:hover {
+    transform: translateY(-5px);
+}
+
+.flor img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.flor div {
+    padding: 18px;
+}
+
+.flor h3 {
+    color: #a4517c;
+    margin-bottom: 8px;
+}
+
+.emoji {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.sobre {
+    text-align: center;
+    padding: 45px 10px;
+}
+
+footer {
+    background: #eac5dc;
+    text-align: center;
+    padding: 22px;
+    color: #754866;
+}
+
+@media(max-width: 650px) {
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inicio img {
+        width: 100%;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+}
+</style>
 </head>
 
 <body>
-    <header>
-        <h1>🌸 Home Flowers 🌸</h1>
-        <p>Um cantinho especial para os amantes de flores e plantas.</p>
-    </header>
 
-    <main>
-        <article>
-            <img src="flores1.avif">
-            <div> 
-                <h2>Bem-vindo à Home Flowers!</h2>
-                <p>Esta página é dedicada a falar sobre várias flores,
-                    plantas e brindes especiais.</p>
+<header>
+    <h1>🌸 Home Flowers 🌸</h1>
+    <p>Um cantinho especial para os amantes de flores.</p>
 
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#flores">Flores</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+</header>
 
-         <article>
-            <img src="flores2.avif">
-            <div class="flor">
-            <div class="emoji">🌹</div>
+<main>
+
+<section class="inicio" id="inicio">
+    <img src="flores1.avif" alt="Buquê de flores">
+
+    <div>
+        <h2>Bem-vindo à Home Flowers! 💐</h2>
+        <p>
+            Aqui você encontra beleza, delicadeza e
+            muito carinho em cada flor. Conheça nosso
+            pequeno jardim especial!
+        </p>
+        <a href="#flores" class="botao">Ver flores</a>
+    </div>
+</section>
+
+<section class="flores" id="flores">
+    <h2>Nosso Jardim 🌷</h2>
+    <p>Conheça algumas das nossas flores favoritas.</p>
+
+    <div class="lista">
+
+        <article class="flor">
+            <img src="flores2.avif" alt="Rosas">
+            <div>
+                <span class="emoji">🌹</span>
                 <h3>Rosas</h3>
-                <p>As rosas são flores lindas e muito populares.</p>
-            </div>
-            </article>    
-
-            <article>
-                <img src="flores2.avif">
-                <div class="flor">
-                    <div class="emoji">🌻</div>
-                    <h3>Girassóis</h3>
-                    <p>Os girassóis trazem alegria e muita beleza.</p>
-                </div>
-            </article>
-
-        <article>
-            <img src="flores2.avif">
-            <div class="flor">
-                <div class="emoji">🌷</div>
-                <h3>Tulipas</h3>
-                <p>As tulipas possuem cores variadas e encantadoras.</p>
+                <p>Representam amor, carinho e romantismo.</p>
             </div>
         </article>
 
-        <article>
-            <img src="flores2.avif">
-            <div class="flor">
-                    <div class="emoji">🌺</div>
-                    <h3>Hibiscos</h3>
-                    <p>Flores coloridas que deixam qualquer jardim mais bonito.</p>
+        <article class="flor">
+            <img src="flores3.avif" alt="Girassóis">
+            <div>
+                <span class="emoji">🌻</span>
+                <h3>Girassóis</h3>
+                <p>Flores cheias de luz, alegria e energia.</p>
             </div>
+        </article>
 
-        </article> 
-    </main>
+        <article class="flor">
+            <img src="flores4.avif" alt="Tulipas">
+            <div>
+                <span class="emoji">🌷</span>
+                <h3>Tulipas</h3>
+                <p>Delicadas, elegantes e cheias de cores.</p>
+            </div>
+        </article>
 
-    <footer>
-        <p>Por Shania Souza 💜</p>
-    </footer>
-    <script src="script.js"></script>
-    
+        <article class="flor">
+            <img src="flores5.avif" alt="Hibiscos">
+            <div>
+                <span class="emoji">🌺</span>
+                <h3>Hibiscos</h3>
+                <p>Flores tropicais lindas e vibrantes.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="sobre" id="sobre">
+    <h2>Feito com amor 💜</h2>
+    <p>
+        A Home Flowers celebra a beleza da natureza
+        e o encanto que cada flor traz para nossas vidas.
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <p>Por Shania Souza 💜</p>
+    <p>🌸 Home Flowers 🌸</p>
+</footer>
+
 </body>
 </html>
+
+   
+            
